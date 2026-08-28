@@ -1,359 +1,1382 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>NachGermany | Find Your Route to Germany</title>
+  <meta charset="UTF-8">
 
-<meta
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    NachGermany | Study, Ausbildung & Work in Germany
+  </title>
+
+  <meta
     name="description"
-    content="Understand the main routes to Germany: Study, Ausbildung and Work."
->
+    content="Clear information about studying, Ausbildung and working in Germany. Understand the main routes, requirements and next steps."
+  >
 
-<meta name="theme-color" content="#ffffff">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
 
-<link rel="canonical" href="https://nachgermany.com/">
+  <meta
+    name="theme-color"
+    content="#111111"
+  >
 
-<link rel="stylesheet" href="assets/css/style.css">
-```
+  <link
+    rel="canonical"
+    href="https://nachgermany.com/"
+  >
+
+  <meta
+    property="og:title"
+    content="NachGermany | Study, Ausbildung & Work in Germany"
+  >
+
+  <meta
+    property="og:description"
+    content="Understand the main routes to Germany: university, Ausbildung and professional work."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://nachgermany.com/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
+  >
+
+  <style>
+
+    
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .home-hero {
+      padding: 85px 0 95px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff 0%,
+          #fafafa 65%,
+          #f7f0d9 100%
+        );
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr .82fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+
+    .hero-copy h1 {
+      max-width: 760px;
+
+      margin-top: 20px;
+
+      font-size:
+        clamp(48px, 7vw, 82px);
+
+      line-height: .95;
+
+      letter-spacing: -5px;
+
+      font-weight: 900;
+    }
+
+
+    .hero-copy h1 .red {
+      color: var(--red);
+    }
+
+
+    .hero-lead {
+      max-width: 690px;
+
+      margin-top: 24px;
+
+      font-size: 18px;
+      line-height: 1.7;
+
+      color: #555;
+    }
+
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 28px;
+    }
+
+
+    .hero-note {
+      max-width: 600px;
+
+      margin-top: 17px;
+
+      color: #777;
+
+      font-size: 12px;
+    }
+
+
+    .hero-visual {
+      position: relative;
+
+      min-height: 500px;
+    }
+
+
+    .hero-image {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 12px;
+
+      filter: saturate(.9);
+    }
+
+
+    .hero-image-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.72),
+          rgba(0,0,0,.02) 70%
+        );
+    }
+
+
+    .hero-route {
+      position: absolute;
+
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+
+      padding: 21px;
+
+      background: rgba(255,255,255,.96);
+
+      border-radius: 9px;
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,.17);
+    }
+
+
+    .hero-route-label {
+      font-size: 10px;
+
+      font-weight: 850;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      color: var(--red);
+
+      margin-bottom: 8px;
+    }
+
+
+    .hero-route h2 {
+      font-size: 24px;
+
+      line-height: 1.15;
+
+      letter-spacing: -.7px;
+    }
+
+
+    .hero-route-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 7px;
+
+      margin-top: 16px;
+    }
+
+
+    .hero-route-grid div {
+      padding: 10px;
+
+      background: #f4f4f2;
+
+      border-radius: 5px;
+
+      text-align: center;
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+
+    .hero-route-grid div:nth-child(2) {
+      border-top: 2px solid var(--red);
+    }
+
+
+    .hero-route-grid div:nth-child(3) {
+      border-top: 2px solid var(--gold);
+    }
+
+
+    /* =========================================================
+       ROUTES
+    ========================================================= */
+
+    .routes-section {
+      padding: 105px 0;
+    }
+
+
+    .route-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 14px;
+
+      margin-top: 48px;
+    }
+
+
+    .route-card {
+      padding: 30px;
+
+      min-height: 330px;
+
+      border: 1px solid var(--line);
+
+      background: #fff;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .route-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 18px 45px rgba(0,0,0,.07);
+    }
+
+
+    .route-number {
+      font-size: 11px;
+
+      color: var(--red);
+
+      font-weight: 850;
+
+      letter-spacing: 1.4px;
+    }
+
+
+    .route-card h3 {
+      margin-top: 45px;
+
+      font-size: 29px;
+
+      letter-spacing: -1px;
+    }
+
+
+    .route-card p {
+      margin-top: 12px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+
+    .route-card a {
+      display: inline-flex;
+
+      margin-top: 22px;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================================================
+       WHAT TO CHECK
+    ========================================================= */
+
+    .check-section {
+      padding: 105px 0;
+
+      background: var(--off-white);
+    }
+
+
+    .check-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      margin-top: 48px;
+
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+
+    .check-item {
+      min-height: 220px;
+
+      padding: 27px;
+
+      background: #fff;
+
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .check-number {
+      font-size: 11px;
+
+      color: var(--red);
+
+      font-weight: 850;
+
+      margin-bottom: 27px;
+    }
+
+
+    .check-item h3 {
+      font-size: 19px;
+
+      line-height: 1.2;
+
+      margin-bottom: 9px;
+    }
+
+
+    .check-item p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       INFORMATION / NOT APPLICATION
+    ========================================================= */
+
+    .principles-section {
+      padding: 105px 0;
+    }
+
+
+    .principles-layout {
+      display: grid;
+
+      grid-template-columns:
+        .85fr 1.15fr;
+
+      gap: 80px;
+    }
+
+
+    .principles-left h2 {
+      max-width: 500px;
+
+      font-size:
+        clamp(38px,5vw,58px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+    }
+
+
+    .principles-left p {
+      max-width: 500px;
+
+      margin-top: 18px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.7;
+    }
+
+
+    .principles-list {
+      border-top: 1px solid var(--line);
+    }
+
+
+    .principle {
+      display: grid;
+
+      grid-template-columns: 40px 1fr;
+
+      gap: 16px;
+
+      padding: 22px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .principle-number {
+      color: var(--red);
+
+      font-size: 11px;
+
+      font-weight: 850;
+    }
+
+
+    .principle h3 {
+      font-size: 18px;
+
+      margin-bottom: 5px;
+    }
+
+
+    .principle p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       SOURCES
+    ========================================================= */
+
+    .sources-section {
+      padding: 95px 0;
+
+      background: var(--cream);
+    }
+
+
+    .sources-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap: 10px;
+
+      margin-top: 40px;
+    }
+
+
+    .source-card {
+      padding: 22px;
+
+      background: #fff;
+
+      border: 1px solid #e2dfd5;
+    }
+
+
+    .source-card h3 {
+      font-size: 17px;
+
+      margin-bottom: 7px;
+    }
+
+
+    .source-card p {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+    }
+
+
+    .source-card a {
+      display: inline-flex;
+
+      margin-top: 14px;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      color: var(--red);
+    }
+
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .home-cta {
+      padding: 75px 0;
+
+      background: var(--black);
+
+      color: #fff;
+    }
+
+
+    .home-cta-inner {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 40px;
+    }
+
+
+    .home-cta h2 {
+      font-size:
+        clamp(34px,5vw,54px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+    }
+
+
+    .home-cta p {
+      max-width: 650px;
+
+      margin-top: 10px;
+
+      color: #aaa;
+    }
+
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero-visual {
+        min-height: 430px;
+      }
+
+
+      .route-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .check-grid,
+      .sources-grid {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+
+      .principles-layout {
+        grid-template-columns: 1fr;
+      }
+
+
+      .home-cta-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .home-hero {
+        padding: 60px 0 70px;
+      }
+
+
+      .hero-copy h1 {
+        letter-spacing: -3px;
+      }
+
+
+      .hero-lead {
+        font-size: 17px;
+      }
+
+
+      .hero-route-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .check-grid,
+      .sources-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
 <body>
 
-```
-<!-- Header -->
-<header class="header">
-    <div class="container header-inner">
-
-        <a href="/" class="logo">
-            NachGermany<span>.com</span>
-        </a>
-
-        <nav class="desktop-nav">
-            <a href="/ausbildung/">Ausbildung</a>
-            <a href="/study/">Study</a>
-            <a href="/work/">Work</a>
-
-            <a
-                href="https://calendly.com/nachgermany-com/germany-profile-assessment"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="nav-button"
-            >
-                Profile Assessment
-            </a>
-        </nav>
-
-        <button
-            class="menu-button"
-            id="menuToggle"
-            aria-label="Open menu"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
-</header>
-
-
-<!-- Mobile Navigation -->
-<div class="mobile-nav" id="mobileMenu">
-
-    <a href="/ausbildung/">Ausbildung</a>
-    <a href="/study/">Study</a>
-    <a href="/work/">Work</a>
-
-    <a
-        href="https://calendly.com/nachgermany-com/germany-profile-assessment"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mobile-nav-button"
-    >
-        Profile Assessment
+  <div class="german-line"></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="NachGermany home">
+      NachGermany<span>.com</span>
     </a>
 
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/" class="active">Home</a>
+      <a href="/ausbildung" class="">Ausbildung</a>
+      <a href="/study" class="">Study</a>
+      <a href="/work" class="">Work</a>
+      <a href="https://calendly.com/nachgermany-com/germany-profile-assessment"
+         class="nav-cta" target="_blank" rel="noopener noreferrer">Profile Assessment</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="/">Home</a>
+  <a href="/ausbildung">Ausbildung</a>
+  <a href="/study">Study</a>
+  <a href="/work">Work</a>
+  <a href="https://calendly.com/nachgermany-com/germany-profile-assessment"
+     class="mobile-cta" target="_blank" rel="noopener noreferrer">Profile Assessment</a>
 </div>
 
+  <main>
 
-<main>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-    <!-- Hero -->
-    <section class="hero">
+    <section class="home-hero">
 
-        <div class="container">
+      <div class="container">
 
-            <div class="hero-content">
+        <div class="hero-grid">
 
-                <div class="eyebrow">
-                    <span class="flag">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </span>
+          <div class="hero-copy reveal">
 
-                    YOUR ROUTE TO GERMANY
-                </div>
+            <div class="eyebrow">
 
-                <h1>
-                    Find the right
-                    <span>route to Germany.</span>
-                </h1>
+              <span class="mini-flag">
+                <span class="black"></span>
+                <span class="red"></span>
+                <span class="gold"></span>
+              </span>
 
-                <p class="hero-text">
-                    Study, Ausbildung or Work.
-                    Understand which route fits your background,
-                    what it requires and where to start.
-                </p>
-
-                <div class="hero-actions">
-
-                    <a href="/study/" class="primary-button">
-                        Study
-                        <span>→</span>
-                    </a>
-
-                    <a href="/ausbildung/" class="secondary-button">
-                        Ausbildung
-                        <span>→</span>
-                    </a>
-
-                    <a href="/work/" class="secondary-button">
-                        Work
-                        <span>→</span>
-                    </a>
-
-                </div>
+              Germany
 
             </div>
 
-        </div>
+            <h1>
+              Understand your
+              <span class="red">
+                route to Germany.
+              </span>
+            </h1>
 
-    </section>
+            <p class="hero-lead">
+              Germany offers different routes for international
+              applicants. The right one depends on your education,
+              qualifications, language level, experience and goal.
+            </p>
 
+            <div class="hero-actions">
 
-    <!-- Route Section -->
-    <section class="routes">
+              <a
+                href="/ausbildung"
+                class="button button-secondary"
+              >
+                Ausbildung
+              </a>
 
-        <div class="container">
+              <a
+                href="/study"
+                class="button button-secondary"
+              >
+                Study
+              </a>
 
-            <div class="section-heading">
-
-                <span>THE MAIN ROUTES</span>
-
-                <h2>
-                    Start with the route
-                    that matches your goal.
-                </h2>
-
-            </div>
-
-
-            <div class="route-list">
-
-                <!-- Study -->
-                <a href="/study/" class="route">
-
-                    <div class="route-number">
-                        01
-                    </div>
-
-                    <div class="route-content">
-
-                        <div class="route-top">
-                            <h3>Study</h3>
-                            <span class="route-arrow">↗</span>
-                        </div>
-
-                        <p>
-                            University studies, admission requirements,
-                            language, financing and the steps toward
-                            studying in Germany.
-                        </p>
-
-                    </div>
-
-                </a>
-
-
-                <!-- Ausbildung -->
-                <a href="/ausbildung/" class="route">
-
-                    <div class="route-number">
-                        02
-                    </div>
-
-                    <div class="route-content">
-
-                        <div class="route-top">
-                            <h3>Ausbildung</h3>
-                            <span class="route-arrow">↗</span>
-                        </div>
-
-                        <p>
-                            Vocational training, suitable occupations,
-                            requirements, applications and the route
-                            into professional training.
-                        </p>
-
-                    </div>
-
-                </a>
-
-
-                <!-- Work -->
-                <a href="/work/" class="route">
-
-                    <div class="route-number">
-                        03
-                    </div>
-
-                    <div class="route-content">
-
-                        <div class="route-top">
-                            <h3>Work</h3>
-                            <span class="route-arrow">↗</span>
-                        </div>
-
-                        <p>
-                            Professional employment, qualifications,
-                            recognition, job opportunities and
-                            residence options.
-                        </p>
-
-                    </div>
-
-                </a>
+              <a
+                href="/work"
+                class="button button-primary"
+              >
+                Work
+              </a>
 
             </div>
 
-        </div>
+            <p class="hero-note">
+              NachGermany provides information and practical
+              guidance. Official requirements should always be
+              checked with the responsible German authority or
+              institution.
+            </p>
 
-    </section>
+          </div>
 
 
-    <!-- Simple CTA -->
-    <section class="cta">
+          <div class="hero-visual reveal">
 
-        <div class="container">
+            <img
+              src="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
+              class="hero-image"
+              alt="International students in Germany"
+              loading="eager"
+            >
 
-            <div class="cta-inner">
+            <div class="hero-image-overlay"></div>
+
+            <div class="hero-route">
+
+              <div class="hero-route-label">
+                Main routes
+              </div>
+
+              <h2>
+                Three common starting points.
+              </h2>
+
+              <div class="hero-route-grid">
 
                 <div>
-
-                    <span class="cta-label">
-                        NOT SURE WHERE YOU FIT?
-                    </span>
-
-                    <h2>
-                        Start with your profile.
-                    </h2>
-
-                    <p>
-                        Discuss your education, experience and goals
-                        and identify which routes are worth exploring.
-                    </p>
-
+                  Ausbildung
                 </div>
 
-                <a
-                    href="https://calendly.com/nachgermany-com/germany-profile-assessment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-button"
-                >
-                    Profile Assessment
-                    <span>→</span>
-                </a>
+                <div>
+                  University
+                </div>
+
+                <div>
+                  Work
+                </div>
+
+              </div>
 
             </div>
 
+          </div>
+
         </div>
+
+      </div>
 
     </section>
 
-</main>
+
+    <!-- =====================================================
+         ROUTES
+    ====================================================== -->
+
+    <section class="routes-section">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="section-label">
+            The main routes
+          </div>
+
+          <h2 class="section-title">
+            Which route are you looking at?
+          </h2>
+
+          <p class="section-intro">
+            Each route has different requirements, application
+            procedures and residence options. Start with the
+            route that matches your current situation.
+          </p>
+
+        </div>
 
 
-<!-- Footer -->
-<footer class="footer">
+        <div class="route-grid">
 
-    <div class="container">
+          <article class="route-card reveal">
 
-        <div class="footer-top">
+            <div class="route-number">
+              01 / AUSBILDUNG
+            </div>
 
-            <div class="footer-brand">
+            <h3>
+              Vocational training
+            </h3>
 
-                <a href="/" class="logo">
-                    NachGermany<span>.com</span>
-                </a>
+            <p>
+              Ausbildung combines vocational education with
+              practical training. Requirements depend on the
+              occupation and type of training.
+            </p>
+
+            <a href="/ausbildung">
+              Ausbildung information →
+            </a>
+
+          </article>
+
+
+          <article class="route-card reveal">
+
+            <div class="route-number">
+              02 / STUDY
+            </div>
+
+            <h3>
+              University
+            </h3>
+
+            <p>
+              Studying in Germany normally starts with checking
+              university entrance qualifications, program
+              requirements, language and financing.
+            </p>
+
+            <a href="/study">
+              Study information →
+            </a>
+
+          </article>
+
+
+          <article class="route-card reveal">
+
+            <div class="route-number">
+              03 / WORK
+            </div>
+
+            <h3>
+              Employment
+            </h3>
+
+            <p>
+              Professional routes depend on qualification,
+              occupation, experience, employment and, for some
+              professions, formal recognition.
+            </p>
+
+            <a href="/work">
+              Work information →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHAT MATTERS
+    ====================================================== -->
+
+    <section class="check-section">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="section-label">
+            Before you apply
+          </div>
+
+          <h2 class="section-title">
+            Four things usually matter.
+          </h2>
+
+          <p class="section-intro">
+            There is no single Germany application. Your
+            requirements depend on the route you choose.
+          </p>
+
+        </div>
+
+
+        <div class="check-grid">
+
+          <article class="check-item reveal">
+
+            <div class="check-number">
+              01
+            </div>
+
+            <h3>
+              Qualification
+            </h3>
+
+            <p>
+              What school, vocational or university qualification
+              do you already have?
+            </p>
+
+          </article>
+
+
+          <article class="check-item reveal">
+
+            <div class="check-number">
+              02
+            </div>
+
+            <h3>
+              Language
+            </h3>
+
+            <p>
+              Which German or English level is required for the
+              specific program, occupation or process?
+            </p>
+
+          </article>
+
+
+          <article class="check-item reveal">
+
+            <div class="check-number">
+              03
+            </div>
+
+            <h3>
+              Requirements
+            </h3>
+
+            <p>
+              Does your chosen university, occupation or
+              training position have additional requirements?
+            </p>
+
+          </article>
+
+
+          <article class="check-item reveal">
+
+            <div class="check-number">
+              04
+            </div>
+
+            <h3>
+              Residence
+            </h3>
+
+            <p>
+              Once the route is clear, check which entry and
+              residence rules apply to your situation.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRINCIPLES
+    ====================================================== -->
+
+    <section class="principles-section">
+
+      <div class="container">
+
+        <div class="principles-layout">
+
+          <div class="principles-left reveal">
+
+            <div class="section-label">
+              How to use NachGermany
+            </div>
+
+            <h2>
+              Information first.
+              Applications second.
+            </h2>
+
+            <p>
+              The purpose of this website is to make the German
+              education and employment system easier to understand
+              before you start preparing applications.
+            </p>
+
+          </div>
+
+
+          <div class="principles-list">
+
+            <article class="principle reveal">
+
+              <div class="principle-number">
+                01
+              </div>
+
+              <div>
+
+                <h3>
+                  Choose the route
+                </h3>
 
                 <p>
-                    Clear information about the routes to Germany.
+                  Start with Ausbildung, university or
+                  professional employment.
                 </p>
 
-            </div>
+              </div>
+
+            </article>
 
 
-            <div class="footer-links">
+            <article class="principle reveal">
 
-                <div>
-                    <span>ROUTES</span>
+              <div class="principle-number">
+                02
+              </div>
 
-                    <a href="/study/">Study</a>
-                    <a href="/ausbildung/">Ausbildung</a>
-                    <a href="/work/">Work</a>
-                </div>
+              <div>
 
-                <div>
-                    <span>CONTACT</span>
+                <h3>
+                  Check the requirements
+                </h3>
 
-                    <a href="mailto:Hallo@nachgermany.com">
-                        Hallo@nachgermany.com
-                    </a>
+                <p>
+                  Requirements can differ between universities,
+                  occupations, training positions and residence
+                  routes.
+                </p>
 
-                    <a
-                        href="https://www.instagram.com/nachgermany/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Instagram
-                    </a>
+              </div>
 
-                    <a
-                        href="https://www.tiktok.com/@nachgermany"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        TikTok
-                    </a>
-                </div>
+            </article>
 
-            </div>
+
+            <article class="principle reveal">
+
+              <div class="principle-number">
+                03
+              </div>
+
+              <div>
+
+                <h3>
+                  Prepare the documents
+                </h3>
+
+                <p>
+                  Only after the route and requirements are clear
+                  should you prepare the relevant documents.
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="principle reveal">
+
+              <div class="principle-number">
+                04
+              </div>
+
+              <div>
+
+                <h3>
+                  Verify with the official source
+                </h3>
+
+                <p>
+                  Rules and requirements can change. The responsible
+                  university, authority or official German portal
+                  remains the final source.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OFFICIAL SOURCES
+    ====================================================== -->
+
+    <section class="sources-section">
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="section-label">
+            Official information
+          </div>
+
+          <h2 class="section-title">
+            Start with reliable sources.
+          </h2>
+
+          <p class="section-intro">
+            NachGermany explains the routes. For current legal,
+            admission and recognition requirements, use the
+            responsible official source.
+          </p>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <div class="sources-grid">
 
-            <span>© 2026 NachGermany</span>
+          <article class="source-card reveal">
 
-            <span>Study · Train · Work in Germany</span>
+            <h3>
+              Make it in Germany
+            </h3>
+
+            <p>
+              Federal government information for international
+              skilled workers, study and vocational training.
+            </p>
+
+            <a
+              href="https://www.make-it-in-germany.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Official website →
+            </a>
+
+          </article>
+
+
+          <article class="source-card reveal">
+
+            <h3>
+              DAAD
+            </h3>
+
+            <p>
+              Information and tools for international students
+              looking at higher education in Germany.
+            </p>
+
+            <a
+              href="https://www.daad.de/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Official website →
+            </a>
+
+          </article>
+
+
+          <article class="source-card reveal">
+
+            <h3>
+              uni-assist
+            </h3>
+
+            <p>
+              Application service used by many German universities
+              for international applicants.
+            </p>
+
+            <a
+              href="https://www.uni-assist.de/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Official website →
+            </a>
+
+          </article>
+
+
+          <article class="source-card reveal">
+
+            <h3>
+              Anerkennung in Deutschland
+            </h3>
+
+            <p>
+              Federal information portal for recognition of foreign
+              professional and vocational qualifications.
+            </p>
+
+            <a
+              href="https://www.anerkennung-in-deutschland.de/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Official website →
+            </a>
+
+          </article>
 
         </div>
 
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OPTIONAL CTA
+    ====================================================== -->
+
+    <section class="home-cta">
+
+      <div class="container home-cta-inner">
+
+        <div>
+
+          <h2>
+            Need help applying
+            your situation?
+          </h2>
+
+          <p>
+            If you want to discuss your profile and possible
+            routes, you can book a Profile Assessment.
+          </p>
+
+        </div>
+
+        <a
+          href="https://calendly.com/nachgermany-com/germany-profile-assessment"
+          class="button button-red"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Profile Assessment →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">NachGermany<span>.com</span></a>
+      <p>Clear information about study, Ausbildung and professional routes to Germany.</p>
     </div>
 
+    <div class="footer-column">
+      <div class="footer-title">Routes</div>
+      <a href="/ausbildung">Ausbildung</a>
+      <a href="/study">Study</a>
+      <a href="/work">Work</a>
+    </div>
+
+    <div class="footer-column">
+      <div class="footer-title">Official sources</div>
+      <a href="https://www.make-it-in-germany.com/" target="_blank" rel="noopener noreferrer">Make it in Germany</a>
+      <a href="https://www.daad.de/en/" target="_blank" rel="noopener noreferrer">DAAD</a>
+      <a href="https://www.uni-assist.de/en/" target="_blank" rel="noopener noreferrer">uni-assist</a>
+      <a href="https://www.anerkennung-in-deutschland.de/en/" target="_blank" rel="noopener noreferrer">Anerkennung in Deutschland</a>
+    </div>
+
+    <div class="footer-column">
+      <div class="footer-title">Contact</div>
+      <a href="mailto:Hallo@nachgermany.com">Hallo@nachgermany.com</a>
+      <a href="https://www.instagram.com/nachgermany/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@nachgermany" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://calendly.com/nachgermany-com/germany-profile-assessment" target="_blank" rel="noopener noreferrer">Profile Assessment</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 NachGermany</span>
+    <span>Study · Train · Work in Germany</span>
+  </div>
 </footer>
 
 
-<script src="assets/js/main.js"></script>
-```
+  <script src="/assets/js/main.js" defer></script>
 
 </body>
+
 </html>

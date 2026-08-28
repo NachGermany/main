@@ -1,68 +1,117 @@
 (() => {
 
-```
-const menuButton = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
+      const menuToggle =
+        document.getElementById("menuToggle");
 
-if (!menuButton || !mobileMenu) {
-    return;
-}
-
-menuButton.addEventListener("click", () => {
-
-    const isOpen = mobileMenu.classList.toggle("active");
-
-    menuButton.classList.toggle("active", isOpen);
-
-    menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-    );
-
-    document.body.style.overflow = isOpen
-        ? "hidden"
-        : "";
-});
+      const mobileMenu =
+        document.getElementById("mobileMenu");
 
 
-mobileMenu
-    .querySelectorAll("a")
-    .forEach(link => {
+      if (menuToggle && mobileMenu) {
 
-        link.addEventListener("click", () => {
+        menuToggle.addEventListener(
+          "click",
+          () => {
 
-            mobileMenu.classList.remove("active");
+            const active =
+              mobileMenu.classList.toggle("active");
 
-            menuButton.classList.remove("active");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
+            document.body.classList.toggle(
+              "menu-open",
+              active
             );
 
-            document.body.style.overflow = "";
-        });
+            menuToggle.setAttribute(
+              "aria-expanded",
+              active ? "true" : "false"
+            );
 
-    });
+            mobileMenu.setAttribute(
+              "aria-hidden",
+              active ? "false" : "true"
+            );
 
-
-window.addEventListener("resize", () => {
-
-    if (window.innerWidth > 800) {
-
-        mobileMenu.classList.remove("active");
-
-        menuButton.classList.remove("active");
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
+          }
         );
 
-        document.body.style.overflow = "";
-    }
 
-});
-```
+        mobileMenu
+          .querySelectorAll("a")
+          .forEach(link => {
 
-})();
+            link.addEventListener(
+              "click",
+              () => {
+
+                mobileMenu.classList.remove(
+                  "active"
+                );
+
+                document.body.classList.remove(
+                  "menu-open"
+                );
+
+                menuToggle.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+                mobileMenu.setAttribute(
+                  "aria-hidden",
+                  "true"
+                );
+
+              }
+            );
+
+          });
+
+      }
+
+
+      const revealItems =
+        document.querySelectorAll(".reveal");
+
+
+      if ("IntersectionObserver" in window) {
+
+        const observer =
+          new IntersectionObserver(
+            entries => {
+
+              entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              });
+
+            },
+            {
+              threshold: .12
+            }
+          );
+
+
+        revealItems.forEach(
+          item => observer.observe(item)
+        );
+
+      } else {
+
+        revealItems.forEach(
+          item => item.classList.add("visible")
+        );
+
+      }
+
+    })();

@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -132,17 +131,6 @@
       gap: 10px;
 
       margin-top: 28px;
-    }
-
-
-    .hero-note {
-      max-width: 600px;
-
-      margin-top: 17px;
-
-      color: #777;
-
-      font-size: 12px;
     }
 
 
@@ -403,71 +391,6 @@
 
 
     /* =========================================================
-       WHAT TO CHECK
-    ========================================================= */
-
-    .check-section {
-      padding: 105px 0;
-
-      background: var(--off-white);
-    }
-
-
-    .check-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      margin-top: 48px;
-
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-
-    .check-item {
-      min-height: 220px;
-
-      padding: 27px;
-
-      background: #fff;
-
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-
-    .check-number {
-      font-size: 11px;
-
-      color: var(--red);
-
-      font-weight: 850;
-
-      margin-bottom: 27px;
-    }
-
-
-    .check-item h3 {
-      font-size: 19px;
-
-      line-height: 1.2;
-
-      margin-bottom: 9px;
-    }
-
-
-    .check-item p {
-      color: var(--muted);
-
-      font-size: 13px;
-
-      line-height: 1.65;
-    }
-
-
-    /* =========================================================
        INFORMATION / NOT APPLICATION
     ========================================================= */
 
@@ -555,67 +478,6 @@
 
 
     /* =========================================================
-       SOURCES
-    ========================================================= */
-
-    .sources-section {
-      padding: 95px 0;
-
-      background: var(--cream);
-    }
-
-
-    .sources-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap: 10px;
-
-      margin-top: 40px;
-    }
-
-
-    .source-card {
-      padding: 22px;
-
-      background: #fff;
-
-      border: 1px solid #e2dfd5;
-    }
-
-
-    .source-card h3 {
-      font-size: 17px;
-
-      margin-bottom: 7px;
-    }
-
-
-    .source-card p {
-      color: var(--muted);
-
-      font-size: 12px;
-
-      line-height: 1.6;
-    }
-
-
-    .source-card a {
-      display: inline-flex;
-
-      margin-top: 14px;
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      color: var(--red);
-    }
-
-
-    /* =========================================================
        CTA
     ========================================================= */
 
@@ -675,13 +537,6 @@
       }
 
 
-      .check-grid,
-      .sources-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-
       .principles-layout {
         grid-template-columns: 1fr;
       }
@@ -718,11 +573,6 @@
       }
 
 
-      .check-grid,
-      .sources-grid {
-        grid-template-columns: 1fr;
-      }
-
     }
 
   </style>
@@ -756,6 +606,13 @@
           rel="noopener noreferrer"
         >
           Profile Assessment
+        </a>
+
+        <a
+          href="https://app.nachgermany.com/register.html"
+          class="nav-login"
+        >
+          Sign up
         </a>
 
         <a
@@ -804,6 +661,13 @@
     </a>
 
     <a
+      href="https://app.nachgermany.com/register.html"
+      class="mobile-login"
+    >
+      Sign up
+    </a>
+
+    <a
       href="https://app.nachgermany.com/login.html"
       class="mobile-login"
     >
@@ -843,7 +707,7 @@
 
 
             <h1>
-              Germany may be
+              Germany is
               <span class="red">
                 closer than you think.
               </span>
@@ -882,13 +746,6 @@
 
             </div>
 
-
-            <p class="hero-note">
-              NachGermany provides information and practical
-              guidance. Official requirements should always be
-              checked with the responsible German authority or
-              institution.
-            </p>
 
           </div>
 
@@ -1048,112 +905,6 @@
 
 
     <!-- =====================================================
-         WHAT MATTERS
-    ====================================================== -->
-
-    <section class="check-section">
-
-      <div class="container">
-
-        <div class="reveal">
-
-          <div class="section-label">
-            Before you apply
-          </div>
-
-          <h2 class="section-title">
-            Four things usually matter.
-          </h2>
-
-          <p class="section-intro">
-            There is no single Germany application. Your
-            requirements depend on the route you choose.
-          </p>
-
-        </div>
-
-
-        <div class="check-grid">
-
-          <article class="check-item reveal">
-
-            <div class="check-number">
-              01
-            </div>
-
-            <h3>
-              Qualification
-            </h3>
-
-            <p>
-              What school, vocational or university qualification
-              do you already have?
-            </p>
-
-          </article>
-
-
-          <article class="check-item reveal">
-
-            <div class="check-number">
-              02
-            </div>
-
-            <h3>
-              Language
-            </h3>
-
-            <p>
-              Which German or English level is required for the
-              specific program, occupation or process?
-            </p>
-
-          </article>
-
-
-          <article class="check-item reveal">
-
-            <div class="check-number">
-              03
-            </div>
-
-            <h3>
-              Requirements
-            </h3>
-
-            <p>
-              Does your chosen university, occupation or
-              training position have additional requirements?
-            </p>
-
-          </article>
-
-
-          <article class="check-item reveal">
-
-            <div class="check-number">
-              04
-            </div>
-
-            <h3>
-              Residence
-            </h3>
-
-            <p>
-              Once the route is clear, check which entry and
-              residence rules apply to your situation.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
          PRINCIPLES
     ====================================================== -->
 
@@ -1175,9 +926,8 @@
             </h2>
 
             <p>
-              The purpose of this website is to make the German
-              education and employment system easier to understand
-              before you start preparing applications.
+              Understand your options first, then submit your profile
+              and documents for review.
             </p>
 
           </div>
@@ -1194,12 +944,11 @@
               <div>
 
                 <h3>
-                  Choose the route
+                  Create your account
                 </h3>
 
                 <p>
-                  Start with Ausbildung, university or
-                  professional employment.
+                  Sign up and create your NachGermany account.
                 </p>
 
               </div>
@@ -1216,13 +965,11 @@
               <div>
 
                 <h3>
-                  Check the requirements
+                  Complete your profile
                 </h3>
 
                 <p>
-                  Requirements can differ between universities,
-                  occupations, training positions and residence
-                  routes.
+                  Add your education, language, experience and target route.
                 </p>
 
               </div>
@@ -1239,12 +986,11 @@
               <div>
 
                 <h3>
-                  Prepare the documents
+                  Upload your documents
                 </h3>
 
                 <p>
-                  Only after the route and requirements are clear
-                  should you prepare the relevant documents.
+                  Upload the relevant documents so we can understand your profile.
                 </p>
 
               </div>
@@ -1261,13 +1007,11 @@
               <div>
 
                 <h3>
-                  Verify with the official source
+                  We contact you
                 </h3>
 
                 <p>
-                  Rules and requirements can change. The responsible
-                  university, authority or official German portal
-                  remains the final source.
+                  We review the information you provide and contact you about the next steps.
                 </p>
 
               </div>
@@ -1275,129 +1019,6 @@
             </article>
 
           </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         OFFICIAL SOURCES
-    ====================================================== -->
-
-    <section class="sources-section">
-
-      <div class="container">
-
-        <div class="reveal">
-
-          <div class="section-label">
-            Official information
-          </div>
-
-          <h2 class="section-title">
-            Start with reliable sources.
-          </h2>
-
-          <p class="section-intro">
-            NachGermany explains the routes. For current legal,
-            admission and recognition requirements, use the
-            responsible official source.
-          </p>
-
-        </div>
-
-
-        <div class="sources-grid">
-
-          <article class="source-card reveal">
-
-            <h3>
-              Make it in Germany
-            </h3>
-
-            <p>
-              Federal government information for international
-              skilled workers, study and vocational training.
-            </p>
-
-            <a
-              href="https://www.make-it-in-germany.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Official website →
-            </a>
-
-          </article>
-
-
-          <article class="source-card reveal">
-
-            <h3>
-              DAAD
-            </h3>
-
-            <p>
-              Information and tools for international students
-              looking at higher education in Germany.
-            </p>
-
-            <a
-              href="https://www.daad.de/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Official website →
-            </a>
-
-          </article>
-
-
-          <article class="source-card reveal">
-
-            <h3>
-              uni-assist
-            </h3>
-
-            <p>
-              Application service used by many German universities
-              for international applicants.
-            </p>
-
-            <a
-              href="https://www.uni-assist.de/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Official website →
-            </a>
-
-          </article>
-
-
-          <article class="source-card reveal">
-
-            <h3>
-              Anerkennung in Deutschland
-            </h3>
-
-            <p>
-              Federal information portal for recognition of foreign
-              professional and vocational qualifications.
-            </p>
-
-            <a
-              href="https://www.anerkennung-in-deutschland.de/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Official website →
-            </a>
-
-          </article>
 
         </div>
 
@@ -1586,4 +1207,3 @@
 </body>
 
 </html>
-```

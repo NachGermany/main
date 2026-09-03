@@ -728,17 +728,6 @@
     }
 
 
-    .hero-note {
-      max-width: 600px;
-
-      margin-top: 17px;
-
-      color: #777;
-
-      font-size: 12px;
-    }
-
-
     .hero-visual {
       position: relative;
 
@@ -944,71 +933,6 @@
 
 
     /* =========================================================
-       WHAT TO CHECK
-    ========================================================= */
-
-    .check-section {
-      padding: 105px 0;
-
-      background: var(--off-white);
-    }
-
-
-    .check-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      margin-top: 48px;
-
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-
-    .check-item {
-      min-height: 220px;
-
-      padding: 27px;
-
-      background: #fff;
-
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-
-    .check-number {
-      font-size: 11px;
-
-      color: var(--red);
-
-      font-weight: 850;
-
-      margin-bottom: 27px;
-    }
-
-
-    .check-item h3 {
-      font-size: 19px;
-
-      line-height: 1.2;
-
-      margin-bottom: 9px;
-    }
-
-
-    .check-item p {
-      color: var(--muted);
-
-      font-size: 13px;
-
-      line-height: 1.65;
-    }
-
-
-    /* =========================================================
        INFORMATION / NOT APPLICATION
     ========================================================= */
 
@@ -1096,67 +1020,6 @@
 
 
     /* =========================================================
-       SOURCES
-    ========================================================= */
-
-    .sources-section {
-      padding: 95px 0;
-
-      background: var(--cream);
-    }
-
-
-    .sources-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap: 10px;
-
-      margin-top: 40px;
-    }
-
-
-    .source-card {
-      padding: 22px;
-
-      background: #fff;
-
-      border: 1px solid #e2dfd5;
-    }
-
-
-    .source-card h3 {
-      font-size: 17px;
-
-      margin-bottom: 7px;
-    }
-
-
-    .source-card p {
-      color: var(--muted);
-
-      font-size: 12px;
-
-      line-height: 1.6;
-    }
-
-
-    .source-card a {
-      display: inline-flex;
-
-      margin-top: 14px;
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      color: var(--red);
-    }
-
-
-    /* =========================================================
        CTA
     ========================================================= */
 
@@ -1216,13 +1079,6 @@
       }
 
 
-      .check-grid,
-      .sources-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-
       .principles-layout {
         grid-template-columns: 1fr;
       }
@@ -1259,10 +1115,6 @@
       }
 
 
-      .check-grid,
-      .sources-grid {
-        grid-template-columns: 1fr;
-      }
 
     }
 

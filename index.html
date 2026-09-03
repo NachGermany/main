@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -61,9 +62,6 @@
   >
 
   <style>
-
-    
-
 
     /* =========================================================
        HERO
@@ -263,6 +261,58 @@
 
     .hero-route-grid div:nth-child(3) {
       border-top: 2px solid var(--gold);
+    }
+
+
+    /* =========================================================
+       HEADER LOGIN
+    ========================================================= */
+
+    .nav-login {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 16px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 6px;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      background: #fff;
+
+      color: var(--black);
+
+      transition:
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+
+    .nav-login:hover {
+      background: #f5f5f3;
+    }
+
+
+    .mobile-login {
+      display: block;
+
+      margin-top: 8px;
+
+      padding: 13px 16px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 6px;
+
+      font-weight: 800;
+
+      text-align: center;
     }
 
 
@@ -684,36 +734,84 @@
 <body>
 
   <div class="german-line"></div>
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="NachGermany home">
-      NachGermany<span>.com</span>
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="NachGermany home">
+        NachGermany<span>.com</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+
+        <a href="/" class="active">
+          Home
+        </a>
+
+        <a
+          href="https://calendly.com/nachgermany-com/germany-profile-assessment"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Profile Assessment
+        </a>
+
+        <a
+          href="https://app.nachgermany.com/login.html"
+          class="nav-login"
+        >
+          Sign in
+        </a>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+  >
+
+    <a href="/">
+      Home
     </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/" class="active">Home</a>
-      <a href="/ausbildung" class="">Ausbildung</a>
-      <a href="/study" class="">Study</a>
-      <a href="/work" class="">Work</a>
-      <a href="https://calendly.com/nachgermany-com/germany-profile-assessment"
-         class="nav-cta" target="_blank" rel="noopener noreferrer">Profile Assessment</a>
-    </nav>
+    <a
+      href="https://calendly.com/nachgermany-com/germany-profile-assessment"
+      class="mobile-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Profile Assessment
+    </a>
 
-    <button class="menu-toggle" id="menuToggle" type="button"
-      aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span>
-    </button>
+    <a
+      href="https://app.nachgermany.com/login.html"
+      class="mobile-login"
+    >
+      Sign in
+    </a>
+
   </div>
-</header>
 
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <a href="/">Home</a>
-  <a href="/ausbildung">Ausbildung</a>
-  <a href="/study">Study</a>
-  <a href="/work">Work</a>
-  <a href="https://calendly.com/nachgermany-com/germany-profile-assessment"
-     class="mobile-cta" target="_blank" rel="noopener noreferrer">Profile Assessment</a>
-</div>
 
   <main>
 
@@ -732,27 +830,32 @@
             <div class="eyebrow">
 
               <span class="mini-flag">
+
                 <span class="black"></span>
                 <span class="red"></span>
                 <span class="gold"></span>
+
               </span>
 
               Germany
 
             </div>
 
+
             <h1>
-              Understand your
+              Germany may be
               <span class="red">
-                route to Germany.
+                closer than you think.
               </span>
             </h1>
+
 
             <p class="hero-lead">
               Germany offers different routes for international
               applicants. The right one depends on your education,
               qualifications, language level, experience and goal.
             </p>
+
 
             <div class="hero-actions">
 
@@ -779,6 +882,7 @@
 
             </div>
 
+
             <p class="hero-note">
               NachGermany provides information and practical
               guidance. Official requirements should always be
@@ -800,6 +904,7 @@
 
             <div class="hero-image-overlay"></div>
 
+
             <div class="hero-route">
 
               <div class="hero-route-label">
@@ -809,6 +914,7 @@
               <h2>
                 Three common starting points.
               </h2>
+
 
               <div class="hero-route-grid">
 
@@ -1301,7 +1407,7 @@
 
 
     <!-- =====================================================
-         OPTIONAL CTA
+         CTA
     ====================================================== -->
 
     <section class="home-cta">
@@ -1322,6 +1428,7 @@
 
         </div>
 
+
         <a
           href="https://calendly.com/nachgermany-com/germany-profile-assessment"
           class="button button-red"
@@ -1337,46 +1444,146 @@
 
   </main>
 
+
   <footer class="site-footer">
-  <div class="container footer-main">
-    <div class="footer-brand">
-      <a href="/" class="footer-logo">NachGermany<span>.com</span></a>
-      <p>Clear information about study, Ausbildung and professional routes to Germany.</p>
+
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+
+        <a href="/" class="footer-logo">
+          NachGermany<span>.com</span>
+        </a>
+
+        <p>
+          Clear information about study, Ausbildung and professional routes to Germany.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <div class="footer-title">
+          Routes
+        </div>
+
+        <a href="/ausbildung">
+          Ausbildung
+        </a>
+
+        <a href="/study">
+          Study
+        </a>
+
+        <a href="/work">
+          Work
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <div class="footer-title">
+          Official sources
+        </div>
+
+        <a
+          href="https://www.make-it-in-germany.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Make it in Germany
+        </a>
+
+        <a
+          href="https://www.daad.de/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DAAD
+        </a>
+
+        <a
+          href="https://www.uni-assist.de/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          uni-assist
+        </a>
+
+        <a
+          href="https://www.anerkennung-in-deutschland.de/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Anerkennung in Deutschland
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <div class="footer-title">
+          Contact
+        </div>
+
+        <a href="mailto:Hallo@nachgermany.com">
+          Hallo@nachgermany.com
+        </a>
+
+        <a
+          href="https://www.instagram.com/nachgermany/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@nachgermany"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok
+        </a>
+
+        <a
+          href="https://calendly.com/nachgermany-com/germany-profile-assessment"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Profile Assessment
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="footer-column">
-      <div class="footer-title">Routes</div>
-      <a href="/ausbildung">Ausbildung</a>
-      <a href="/study">Study</a>
-      <a href="/work">Work</a>
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 NachGermany
+      </span>
+
+      <span>
+        Study · Train · Work in Germany
+      </span>
+
     </div>
 
-    <div class="footer-column">
-      <div class="footer-title">Official sources</div>
-      <a href="https://www.make-it-in-germany.com/" target="_blank" rel="noopener noreferrer">Make it in Germany</a>
-      <a href="https://www.daad.de/en/" target="_blank" rel="noopener noreferrer">DAAD</a>
-      <a href="https://www.uni-assist.de/en/" target="_blank" rel="noopener noreferrer">uni-assist</a>
-      <a href="https://www.anerkennung-in-deutschland.de/en/" target="_blank" rel="noopener noreferrer">Anerkennung in Deutschland</a>
-    </div>
-
-    <div class="footer-column">
-      <div class="footer-title">Contact</div>
-      <a href="mailto:Hallo@nachgermany.com">Hallo@nachgermany.com</a>
-      <a href="https://www.instagram.com/nachgermany/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.tiktok.com/@nachgermany" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://calendly.com/nachgermany-com/germany-profile-assessment" target="_blank" rel="noopener noreferrer">Profile Assessment</a>
-    </div>
-  </div>
-
-  <div class="container footer-bottom">
-    <span>© 2026 NachGermany</span>
-    <span>Study · Train · Work in Germany</span>
-  </div>
-</footer>
+  </footer>
 
 
-  <script src="/assets/js/main.js" defer></script>
+  <script
+    src="/assets/js/main.js"
+    defer
+  ></script>
 
 </body>
 
 </html>
+```

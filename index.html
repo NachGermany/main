@@ -76,7 +76,7 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     ========================================================= */
 
     .home-hero {
-      padding: 85px 0 95px;
+      padding: 64px 0 95px;
 
       background:
         linear-gradient(
@@ -262,7 +262,7 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     ========================================================= */
 
     .routes-section {
-      padding: 105px 0;
+      padding: 72px 0 105px;
     }
 
 
@@ -348,7 +348,7 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     ========================================================= */
 
     .principles-section {
-      padding: 105px 0;
+      padding: 72px 0 105px;
     }
 
 
@@ -424,7 +424,7 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     .principle p {
       color: var(--muted);
 
-      font-size: 13px;
+      font-size: 15px;
 
       line-height: 1.65;
     }
@@ -528,7 +528,7 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     @media (max-width: 620px) {
 
       .home-hero {
-        padding: 55px 0 65px;
+        padding: 42px 0 65px;
       }
 
 
@@ -583,9 +583,12 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
       }
 
 
-      .routes-section,
-      .principles-section {
+      .routes-section {
         padding: 75px 0;
+      }
+
+      .principles-section {
+        padding: 50px 0 75px;
       }
 
 
@@ -622,6 +625,15 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
         gap: 12px;
 
         padding: 20px 0;
+      }
+
+      .principle p {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .principles-layout {
+        gap: 28px;
       }
 
 
@@ -662,7 +674,7 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
 
     .carousel {
       position: relative;
-      margin-top: 48px;
+      margin-top: 30px;
       min-width: 0;
       max-width: 100%;
     }
@@ -793,6 +805,21 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
       stroke: none;
     }
 
+    .footer-bottom {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .footer-bottom {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 14px;
+      }
+    }
+
   </style>
 
   <link
@@ -827,14 +854,6 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     class="main-nav"
     aria-label="Main navigation"
   >
-
-    <a
-      href="/"
-      class="active"
-    >
-      Home
-    </a>
-
 
     <a
       href="https://calendly.com/nachgermany-com/germany-profile-assessment"
@@ -889,11 +908,6 @@ content="https://images.pexels.com/photos/37779089/pexels-photo-37779089.jpeg"
     id="mobileMenu"
     aria-hidden="true"
   >
-
-<a href="/">
-  Home
-</a>
-
 
 <a
   href="https://calendly.com/nachgermany-com/germany-profile-assessment"

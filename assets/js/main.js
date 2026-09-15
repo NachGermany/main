@@ -1,4 +1,38 @@
 (() => {
+  const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+  const isActive = path => currentPath === path ? " active" : "";
+  const menuGroups = {
+    study: [
+      ["Am I eligible?", "/study#requirements", "Admission requirements", "Grades, tests and documents"],
+      ["APS verification", "/study#requirements", "Required for India and China", "Start early if it applies to you"],
+      ["Admission chance", "/tools/admission-chance/", "See where you stand", "A practical first-pass check"],
+      ["What will it cost?", "/tools/cost-of-living/", "Cost of living", "Build a monthly budget"],
+      ["Blocked account", "/tools/blocked-account/", "Your proof of funds", "Plan your financial evidence"],
+      ["The full path", "/study#process", "Application process", "Step by step, in order"]
+    ],
+    ausbildung: [
+      ["Explore the route", "/ausbildung#requirements", "Requirements", "Education, German and the role"],
+      ["Check your fit", "/tools/ausbildung-eligibility/", "Eligibility checker", "A useful first step"],
+      ["Plan your work", "/tools/ausbildung-salary/", "Salary calculator", "Estimate training pay"],
+      ["Compare paths", "/tools/ausbildung-vs-university/", "Ausbildung or university?", "Compare your options"]
+    ],
+    work: [
+      ["Find your route", "/work#requirements", "Work requirements", "Qualification, role and recognition"],
+      ["EU Blue Card", "/tools/blue-card/", "Eligibility checker", "Review the common conditions"],
+      ["Chancenkarte", "/tools/chancenkarte/", "Points calculator", "Prepare the information you need"],
+      ["Plan your income", "/tools/net-salary/", "Net salary calculator", "Estimate your take-home pay"]
+    ]
+  };
+  const megaLinks = (key) => menuGroups[key].map(([group, href, title, description]) => `<a href="${href}"><em>${group}</em><strong>${title}</strong><span>${description}</span></a>`).join("");
+  const mainNav = document.querySelector(".main-nav");
+  const mobileNav = document.getElementById("mobileMenu");
+  if (mainNav) {
+    mainNav.innerHTML = `<div class="nav-item"><a class="nav-trigger${isActive("/study")}" href="/study">Study</a><div class="mega-menu"><h3>Study in Germany</h3>${megaLinks("study")}<a class="mega-cta" href="https://calendly.com/nachgermany-com/germany-profile-assessment" target="_blank" rel="noopener noreferrer"><strong>Check your profile</strong><span>Free, practical route conversation</span></a></div></div><div class="nav-item"><a class="nav-trigger${isActive("/ausbildung")}" href="/ausbildung">Ausbildung</a><div class="mega-menu"><h3>Ausbildung in Germany</h3>${megaLinks("ausbildung")}</div></div><div class="nav-item"><a class="nav-trigger${isActive("/work")}" href="/work">Work</a><div class="mega-menu"><h3>Work in Germany</h3>${megaLinks("work")}</div></div><a class="nav-tools${isActive("/tools")}" href="/tools/">Free tools</a><a class="nav-pricing${isActive("/pricing")}" href="/pricing/">Pricing</a><a class="nav-signup" href="https://app.nachgermany.com/register.html">Sign up</a><a class="nav-login" href="https://app.nachgermany.com/login.html">Sign in</a>`;
+  }
+  if (mobileNav) {
+    mobileNav.innerHTML = `<a href="/study">Study</a><a href="/ausbildung">Ausbildung</a><a href="/work">Work</a><a class="mobile-tools" href="/tools/">Explore free tools</a><a href="/pricing/">Pricing</a><a class="mobile-signup" href="https://app.nachgermany.com/register.html">Sign up</a><a class="mobile-login" href="https://app.nachgermany.com/login.html">Sign in</a><a class="mobile-cta" href="https://calendly.com/nachgermany-com/germany-profile-assessment" target="_blank" rel="noopener noreferrer">Check your profile</a>`;
+  }
+
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
